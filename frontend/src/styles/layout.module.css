@@ -1,0 +1,58 @@
+.shell {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  min-height: 100svh;
+  padding: 12px 12px 80px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.main {
+  display: grid;
+  gap: 12px;
+  animation: fadeIn 0.25s ease;
+}
+
+.nav {
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  width: min(900px, calc(100% - 20px));
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  background: rgba(20, 27, 42, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 8px;
+}
+
+.navItem {
+  color: var(--muted);
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 4px;
+  border-radius: 10px;
+}
+
+.active {
+  color: #fff;
+  background: linear-gradient(120deg, rgba(95, 139, 255, 0.45), rgba(54, 216, 255, 0.35));
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
